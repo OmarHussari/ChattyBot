@@ -3,10 +3,10 @@ package bot;
 import java.util.Scanner;
 
 public class SimpleBot {
-    final static Scanner scanner = new Scanner(System.in); // Do not change this line
+    final static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        greet("Aid", "2018"); // change it as you need
+        greet("Aid", "2018");
         remindName();
         guessAge();
         count();
@@ -14,18 +14,18 @@ public class SimpleBot {
         end();
     }
 
-    static void greet(String assistantName, String birthYear) {
+    static void greet(String assistantName, String birthYear) {          // Greet user
         System.out.println("Hello! My name is " + assistantName + ".");
         System.out.println("I was created in " + birthYear + ".");
         System.out.println("Please, remind me your name.");
     }
 
-    static void remindName() {
+    static void remindName() {      // Ask for user's input (name)
         String name = scanner.nextLine();
         System.out.println("What a great name you have, " + name + "!");
     }
 
-    static void guessAge() {
+    static void guessAge() {    // Perform a simple calculation to guess age
         System.out.println("Let me guess your age.");
         System.out.println("Enter remainders of dividing your age by 3, 5 and 7.");
         int rem3 = scanner.nextInt();
@@ -35,7 +35,7 @@ public class SimpleBot {
         System.out.println("Your age is " + age + "; that's a good time to start programming!");
     }
 
-    static void count() {
+    static void count() {       // for loop to count till inputted number
         System.out.println("Now I will prove to you that I can count to any number you want.");
         int num = scanner.nextInt();
         for (int i = 0; i <= num; i++) {
@@ -43,7 +43,7 @@ public class SimpleBot {
         }
     }
 
-    static void test() {
+    static void test() {        // Quiz that keeps looping until anwer is correct
         System.out.println("Let's test your programming knowledge.");
         System.out.println("Why do we use methods?");
         System.out.println("1. To repeat a statement multiple times.");
@@ -61,11 +61,11 @@ public class SimpleBot {
             } else {
                 done = true;
                 }
+            }
         }
-    }
     
 
-    static void end() {
+    static void end() {         // Outro
         System.out.println("Congratulations, have a nice day!"); // Do not change this text
-    }
+       }
 }
